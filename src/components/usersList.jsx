@@ -52,7 +52,6 @@ function UsersList() {
           <li
             key={user.id}
             style={listItemStyle}
-            
           >
             <strong>{user.name}</strong> - {user.email}
           </li>

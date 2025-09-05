@@ -1,12 +1,5 @@
 import "./App.css";
-import HelloWorldClass from "./components/classComponents/helloWorldClass";
-import PropsDemoClass from "./components/classComponents/propsDemoClass";
-import StateDemoClass from "./components/classComponents/stateDemoClass";
-import HelloWorld from "./components/functionalComponents/helloWorld";
-import PropsDemo from "./components/functionalComponents/propsDemo";
-import StateDemo from "./components/functionalComponents/stateDemo";
-
-
+import UsersList from "./components/usersList";
 
 function App() {
   const appStyle = {
@@ -15,19 +8,8 @@ function App() {
   };
   return (
     <div style={appStyle}>
-      {/* Rendering Functional Components */}
-      <HelloWorld/>
-      <PropsDemo name="Shubham" city="New Delhi" />
-      <StateDemo />
-
-      {/* Rendering Class Components */}
-
-      {/* <HelloWorldClass/>
-      <PropsDemoClass name="Shubham" city="New Delhi"/>
-      <StateDemoClass/> */}
-
+      <UsersList />
     </div>
-   
   );
 }
 

@@ -64,7 +64,7 @@ Add a catch-all route (`*`) to show a **Page Not Found** message for invalid URL
 ---
 
 ### **7. Run the Application**  
-- Start the app using: `npm start`  
+- Start the app using: `npm run dev`  
 - Open the browser and navigate between different routes to test.  
 
 ---

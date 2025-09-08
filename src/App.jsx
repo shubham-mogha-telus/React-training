@@ -7,7 +7,6 @@ import PropsDemo from "./components/functionalComponents/propsDemo";
 import StateDemo from "./components/functionalComponents/stateDemo";
 
 
-
 function App() {
   const appStyle = {
     backgroundColor: "#e6e6fa",

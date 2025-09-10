@@ -1,18 +1,31 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
-import ClickCounter from "./components/clickCounter";
-import HoverCounter from "./components/hoverCounter";
-import withCounter from "./hoc/withCounter";
-
-const EnhancedClickCounter = withCounter(ClickCounter)
-const EnhancedHoverCounter = withCounter(HoverCounter)
-
+import { decrement, increment, resetData } from "./features/counter/counterSlice";
 
 function App() {
+  const count = useSelector((state)=>state.counter.value)
+  const dispatch = useDispatch()
+
+const handleIncrement=()=>{
+  dispatch(increment())
+
+}
+const handleDecrement=()=>{
+  dispatch(decrement())
+
+}
+const handleReset=()=>{
+  dispatch(resetData());
+}
+
   return (
     <div>
-      <h3> High order Component in React Js</h3>
-      <EnhancedClickCounter/>
-      <EnhancedHoverCounter/>
+      <h3> Redux Toolkit in React</h3>
+      <button onClick={handleIncrement}>+</button>
+      <p>Count:{count}</p>
+      <button onClick={handleDecrement}>-</button>
+      <button onClick={handleReset}>Reset</button>
+      
     </div>
   );
 }
